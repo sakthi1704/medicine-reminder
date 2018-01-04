@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Hello Ionic</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <ion-row>
+    <ion-label class="medicine-align" padding-top>Please take the medicine</ion-label>
+    <ion-card>
+      <ion-row>
+        <ion-col class="medicine-align" padding>
+          Dolo-2no
+          Aspirin-2no
+          citrizen-1no
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-row>
+  <button ion-button class="submit-btn" full type="submit" (click)="openadminHomePage()" [disabled]="!login.valid">Take</button>
+  <button ion-button class="" id="forget-pwd" block clear (click)="openForgetUserPage()">Later</button>
+</ion-content>

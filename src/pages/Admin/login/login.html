@@ -1,0 +1,45 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+  <ion-col></ion-col>
+  <ion-col width-67>
+    <img src="assets/imgs/med-reminder.png"/>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row>
+  <div class="login-box">
+    <form [formGroup]="login" (ngSubmit)="logForm()">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+      <p *ngIf="login.controls['email'].errors && login.controls['email'].dirty ">
+        <small class="error">
+            <ion-label> Invalid email address</ion-label>
+   </small>
+</p>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit" (click)="openadminHomePage()" [disabled]="!login.valid">Login</button>
+      <button ion-button class="" id="forget-pwd" block clear (click)="openForgetUserPage()">Forget your passowrd?</button>
+        <button ion-button class="submit-btn registration-button"  full type="submit" (click)="openUserPage()">Register</button>
+    </ion-col>
+  </ion-row>
+</form>
+</div>
+</ion-content>

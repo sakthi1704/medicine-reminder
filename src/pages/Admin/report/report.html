@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <div class="login-box">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+           <ion-label>Select Member</ion-label>
+           <ion-select [(ngModel)]="Member" name="Member">
+             <ion-option value="f">Arjun</ion-option>
+             <ion-option value="r">Rishi</ion-option>
+             <ion-option value="k">Kavitha</ion-option>
+           </ion-select>
+         </ion-item>
+         <ion-item>
+           <ion-label> From Date</ion-label>
+           <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+            </ion-item>
+         <ion-item>
+           <ion-label> To Date</ion-label>
+           <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+            </ion-item>
+             <ion-label class="medicine-align" padding-top> Medicines Missed</ion-label>
+             <ion-card>
+               <ion-row>
+                 <ion-col class="medicine-align" padding>
+                   Aspirin-2
+                 </ion-col>
+               </ion-row>
+             </ion-card>
+             <ion-label class="medicine-align" padding-top> Medicines Taken</ion-label>
+             <ion-card>
+               <ion-row>
+                 <ion-col class="medicine-align" padding>
+                   Paracetomal-2
+                 </ion-col>
+               </ion-row>
+             </ion-card>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</div>
+</ion-content>

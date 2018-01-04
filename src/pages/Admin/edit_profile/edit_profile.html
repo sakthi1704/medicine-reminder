@@ -1,0 +1,45 @@
+<ion-header class="header-bg">
+  <div class="">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hello Ionic</ion-title>
+  </ion-navbar>
+</div>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+  <ion-col></ion-col>
+  <ion-col width-67>
+    <img src="assets/imgs/add-user.jpg"/>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row>
+  <div class="login-box">
+      <!-- <form [formGroup]="login" (ngSubmit)="logForm()"> -->
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label>Change Name</ion-label>
+          <ion-input type="text" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Change Password</ion-label>
+          <ion-input type="text" name="email"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit" (click)="navSettings()">Ok</button>
+    </ion-col>
+  </ion-row>
+    <!-- </form> -->
+</div>
+</ion-content>

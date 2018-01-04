@@ -1,0 +1,64 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <!-- <ion-row class="logo-row">
+  <ion-col></ion-col>
+  <ion-col width-67>
+    <img src="http://placehold.it/300x200"/>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row> -->
+  <div class="login-box">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+           <ion-label>Notifications</ion-label>
+        <ion-item>
+             <ion-label>Sound</ion-label>
+             <ion-select [(ngModel)]="notifications" interface="action-sheet">
+               <ion-option value="RingBells">Ring Bells</ion-option>
+               <ion-option value="mute">Mute</ion-option>
+               <ion-option value="mute_week">Mute for a week</ion-option>
+               <ion-option value="mute_year" (ionSelect)="notificationSelect($event)">Mute for a year</ion-option>
+             </ion-select>
+           </ion-item>
+            <ion-item>
+      <ion-toggle checked="false"></ion-toggle>
+      <ion-label>
+      Vibration
+      </ion-label>
+    </ion-item>
+              <ion-item>
+      <ion-label>preferred Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+      <ion-label>General</ion-label>
+     <button ion-item  (click)="openNavDetailsPage()" icon-start>
+        Edit Profile
+      </button>
+     <button ion-item  (click)="doAlert()" icon-start>
+        Send Feedback
+      </button>
+
+ <ion-fab bottom right>
+    <button ion-fab color="vibrant">share</button>
+    <ion-fab-list side="top">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  <button ion-item  (click)="logout()" icon-start>
+    Logout
+   </button>
+      </ion-list>
+    </ion-col>
+  </ion-row></div>
+</ion-content>

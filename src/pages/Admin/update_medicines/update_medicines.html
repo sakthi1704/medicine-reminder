@@ -1,0 +1,65 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+  <!-- <ion-row class="logo-row">
+  <ion-col></ion-col>
+  <ion-col width-67>
+    <img src="http://placehold.it/300x200"/>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row> -->
+  <div class="login-box">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label floating>Medicine Name</ion-label>
+          <ion-input type="text" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Quantity</ion-label>
+          <ion-input type="text" name="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating> Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+           </ion-item>
+       <ion-item>
+         <ion-label floating> Time</ion-label>
+         <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+       </ion-item>
+       <ion-item>
+   <ion-label floating>Frequency</ion-label>
+   <ion-select [(ngModel)]="Frequency" interface="popover">
+     <ion-option value="1">1</ion-option>
+     <ion-option value="2">2</ion-option>
+     <ion-option value="3">3</ion-option>
+     <ion-option value="4">4</ion-option>
+   </ion-select>
+ </ion-item>
+ <ion-item>
+<ion-label floating>To Whom(user-name)</ion-label>
+<ion-select [(ngModel)]="userNameList" interface="popover">
+<ion-option value="1">1</ion-option>
+<ion-option value="2">2</ion-option>
+<ion-option value="3">3</ion-option>
+<ion-option value="4">4</ion-option>
+</ion-select>
+</ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit" (click)="addUser()">Add</button>
+    </ion-col>
+  </ion-row>
+</div>
+</ion-content>

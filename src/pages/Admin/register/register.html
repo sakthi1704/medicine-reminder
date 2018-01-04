@@ -1,0 +1,63 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="login-content" padding>
+
+  <div class="login-box">
+      <form [formGroup]="login" (ngSubmit)="logForm()">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <p *ngIf="login.controls['name'].errors && login.controls['name'].dirty ">
+          <small class="error">
+              <ion-label> Minimum of 6 characters</ion-label>
+     </small>
+  </p>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <p *ngIf="login.controls['email'].errors && login.controls['email'].dirty ">
+          <small class="error">
+              <ion-label> Invalid email address</ion-label>
+     </small>
+  </p>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" id="password" [formGroup]="login"   formControlName="password"></ion-input>
+        </ion-item>
+        <p *ngIf="login.controls['password'].errors && login.controls['password'].dirty ">
+          <small class="error">
+              <ion-label> Minimum of 6 characters</ion-label>
+      </small>
+      </p>
+        <ion-item>
+          <ion-label floating>Confirm password</ion-label>
+          <ion-input type="password" id="ConfirmPassword"  [formGroup]="login" formControlName="ConfirmPassword"></ion-input>
+        </ion-item>
+        <p *ngIf="login.controls['ConfirmPassword'].errors && login.controls['ConfirmPassword'].dirty ">
+          <small class="error">
+              <ion-label> Minimum of 6 characters</ion-label>
+     </small>
+  </p>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit" (click)="openUserPage()" [disabled]="!login.valid">Register</button>
+    </ion-col>
+  </ion-row>
+  </form>
+</div>
+</ion-content>

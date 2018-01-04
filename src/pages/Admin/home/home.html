@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards">
+<ion-row class="logo-row">
+<ion-col>
+<ion-slides autoplay="500" loop="true" speed="3000">
+  <ion-slide>
+  <img src="assets/imgs/slide1.jpg"/>
+  </ion-slide>
+  <ion-slide>
+  <img src="assets/imgs/slide2.jpg"/>
+  </ion-slide>
+  <ion-slide>
+  <img src="assets/imgs/slide3.jpg"/>
+  </ion-slide>
+  <ion-slide>
+  <img src="assets/imgs/slide4.jpg"/>
+  </ion-slide>
+</ion-slides>
+</ion-col>
+</ion-row>
+  <div class="">
+<ion-card class="medicine-align card-align">
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" (click)="openAddPage()">
+      Admin
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+<ion-card class="medicine-align card-align">
+  <ion-row>
+    <ion-col>
+      <button ion-button color="primary" (click)="openUserLoginPage()">
+      User
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</div>
+</ion-content>

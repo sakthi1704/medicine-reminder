@@ -1,0 +1,63 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="login-content" padding>
+  <!-- <ion-row class="logo-row">
+  <ion-col></ion-col>
+  <ion-col width-67>
+    <img src="assets/imgs/add-user.jpg"/>
+  </ion-col>
+  <ion-col></ion-col>
+</ion-row> -->
+  <div class="login-box">
+      <form [formGroup]="login" (ngSubmit)="logForm()">
+  <ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label floating>Name</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Password(for user)</ion-label>
+          <ion-input type="password"  formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating> Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month" formControlName="date"></ion-datetime>
+           </ion-item>
+           <ion-item>
+              <ion-label floating>Gender</ion-label>
+              <ion-select [(ngModel)]="gender" formControlName="gender">
+                <ion-option value="f">Female</ion-option>
+                <ion-option value="m">Male</ion-option>
+              </ion-select>
+            </ion-item>
+        <ion-item>
+          <ion-label floating>Blood Group</ion-label>
+          <ion-input type="text"  formControlName="BloodGroup"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Relation (optional)</ion-label>
+          <ion-input type="text"  formControlName="Relation"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="signup-col">
+      <button ion-button class="submit-btn" full type="submit" (click)="openDisplayUser()" [disabled]="!login.valid">Add</button>
+    </ion-col>
+  </ion-row>
+    </form>
+</div>
+</ion-content>
